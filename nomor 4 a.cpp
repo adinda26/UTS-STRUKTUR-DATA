@@ -1,23 +1,23 @@
-#include <iostream>
-#include <conio.h>
+#include<stdio.h>
+#include<conio.h>
 
+int main(){
+	float da[1000]={8,10,6,2,11,7,1,100};
+	int cari,jmlh=0;
+	bool bol=false;
 
-using namespace std;
+	printf("masukkan data yang di cari : ");
+	scanf("%d",&cari);
 
-int main (){
-
-	int data [1000];
-	int cari;
-	int flag = 0;
-	cout<<endl<<endl;
-	cout<< "masukkan data yang ingin dicari = ";
-	cin >>cari;
-	for (int i=0; i<1000; i++)
-	{
-		if (data [i] == cari) flag=1;
-		break;
-	}
-	if (flag ==1) cout<<"data ada!\n";
-		else cout<<"data tidak ada!\n";
+	for(int i=0;i<1000;i++){
+        if(da[i]==cari){
+            bol=true;
+        break;
+        }
+    }
+    if(bol==true){
+        printf("data ada \n");
+    }else{
+        printf("Data Tidak ada\n");
+    }
 }
-
